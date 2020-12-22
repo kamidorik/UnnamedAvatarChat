@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; font-family: 'Roboto Condensed', sans-serif;}
+			canvas { width: 100%; height: 100% }
+			#info {
+				position: absolute;
+				top: 10px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+			}
+			#chat {
+				position: absolute;
+				bottom: 10px;
+				width: 50%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+				background: #ACDF87;
+				margin-top:32;
+    			border-style:solid;
+   	 			border-color:white;
+   	 			border-radius:24px;
+			}
+			#btn2 {
+				background: #ACDF87;
+				border-style:solid;
+   	 			border-color:white;
+   	 			border-radius:12px;
+			}
+			#btn {
+				background: #ACDF87;
+				border-style:solid;
+   	 			border-color:white;
+   	 			border-radius:12px;
+			}
+			#btn3 {
+				background: #75bbfd;
+				border-style:solid;
+   	 			border-color:white;
+   	 			border-radius:12px;
+			}
+			#chatLog {
+				background: #000000;
+				position: absolute;
+				top: 30px;
+				width: 50%;
+				opacity: 0.4;
+				text-align: left;
+				z-index: 100;
+				display:block;
+				color: white;
+			}
+			#colorPic {
+				position: absolute;
+				top: 100px;
+				width: 100%;
+				text-align: center;
+				z-index: 100;
+				display:block;
+				background-color:rgba(172,223,135, 0.5);
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+		<script type='text/javascript' src='jscolor.js'></script>
+		<script type='text/javascript' src='game.js'></script>
+		<div id="info">КубаМир 0.1</div>
+		<div id="chatLog"></div>
+		<div id="colorPic"><h2>Смена цвета</h2>
+			Цвет: <input class="jscolor" onchange="update(this.jscolor)" value="cc66ff"><p>
+			
+			<button id="btn" >Закрыть</button></div>
+		<div id="chat">
+			Введи сообщение: <input type="text" id="chatArea" size="40">
+  			<button id="btn2" >Отправить</button>
+  			<button id="btn3" >Сменить цвет</button>
+	 	</div>
+	</body>
+</html>
